@@ -95,8 +95,8 @@ fun main(args: Array<String>) {
     val delta = List(q) { mutableMapOf<Int, Int>() }
 
     val lines = file.readLines()
-    for (i in 0 until lines.size - 1) {
-        val (from, symbol, to) = lines[i].split(" ").map { it.toInt() }
+    for (element in lines) {
+        val (from, symbol, to) = element.split(" ").map { it.toInt() }
         delta[from][symbol] = to
     }
 
